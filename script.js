@@ -258,6 +258,144 @@
     
 
 
+//this-task2
+  
+
+// const dog = {
+//     name: 'Charlie',
+//     type: 'Dog',
+//     makeSound() {
+//         return 'Wow-Wow'
+//     }
+// }
+
+// const bird = {
+//     name: 'Petya',
+//     type: 'Sparrow',
+//     makeSound() {
+//         return 'Cheek-chirp'
+//     }
+// }
+
+
+// function makeDomestic(domestic) {
+//     let a = {
+//         isDomestic: domestic
+//     }
+//     let animal = Object.assign(a,this)
+//     let sound = animal.makeSound()
+//     console.log(`type of ${this.type} ${this.name} says ${sound}`)
+// }
+
+// makeDomestic.call(bird, true)
+// const bindMethod = makeDomestic.bind(dog)
+// bindMethod(false)
+// makeDomestic.apply(bird, [true])
+
+
+
+//this-task3
+
+// const footballer = {
+//     fullName: 'Cristiano Ronaldo',
+//     attack: function() {
+//     console.log(`${this.fullName} is now with the ball and starting to attack!`);
+//     },
+
+//     scoreGoal: function(sound) {
+//     console.log(`${this.fullName} scored a goal! Wow!`);
+//     this.celebrate(sound);
+//     },
+//     celebrate(sound) {
+//     console.log(sound);
+//     },
+//     goToSubstitution: function(newPlayer) {
+//     console.log(`${this.fullName} goes to replace. ${newPlayer} enters the field`);
+//     }
+//     }
+    
+   
+//     const attack = footballer.attack;
+//     const score = footballer.scoreGoal;
+//     const substitute = footballer.goToSubstitution;
+
+    
+
+
+//     const binded = attack.bind(footballer)
+//     binded()
+//     score.call(footballer, 'Siiiiiii');
+//     substitute.apply(footballer, ['Paulo Dibala']);
+
+
+
+
+// date-task1
+ 
+
+// function getDateFormat(date, separator = '.') {
+//     const day = date.getDate().toString().padStart(2, '0');
+//     const month = (date.getMonth() + 1).toString().padStart(2, '0');
+//     const year = date.getFullYear().toString();
+//     const separatorChar = separator === '-' ? '-' : '.';
+//     return `${day}${separatorChar}${month}${separatorChar}${year}`;
+//   }
+
+
+//   const date = new Date('2001.5.05');
+//   const formattedDate = getDateFormat(date);
+//   console.log(formattedDate) 
+//   const formattedDateWithDash = getDateFormat(date, '-');
+//   console.log(formattedDateWithDash) 
+
+
+
+
+  //date-task2
+
+
+//   function getDaysBeforeBirthday(nextBirthdayDate) {
+//     const currentDate = new Date();
+//     let nextBirthdayYear = currentDate.getFullYear();
+//     const nextBirthdayMonth = nextBirthdayDate.getMonth();
+//     const nextBirthdayDay = nextBirthdayDate.getDate();
+//     if (nextBirthdayMonth < currentDate.getMonth() ||
+//         (nextBirthdayMonth === currentDate.getMonth() && nextBirthdayDay < currentDate.getDate())) {
+//       nextBirthdayYear += 1;
+//     }
+//     const closestBirthdayDate = new Date(nextBirthdayYear, nextBirthdayMonth, nextBirthdayDay);
+//     const msDifference = closestBirthdayDate.getTime() - currentDate.getTime();
+//     const daysDifference = Math.round(msDifference / (1000 * 60 * 60 * 24));
+//     return daysDifference;
+//   }
+
+
+
+//   const nextBirthdayDate = new Date('2023-08-15');
+//   const daysBeforeBirthday = getDaysBeforeBirthday(nextBirthdayDate);
+//   console.log(`There are ${daysBeforeBirthday} days until my next birthday!`);
+
+  
+// date-task3
+
+
+// function addDays(date, days = 1) {
+//     const millisecondsPerDay = 24 * 60 * 60 * 1000;
+//     const timestamp = date.getTime() + (days * millisecondsPerDay);
+//     return new Date(timestamp);
+//   }
+
+//   const currentDate = new Date();
+//   const nextWeek = addDays(currentDate, 7);
+//   console.log(nextWeek); 
+
+  
+  
+
+
+
+
+
 
 
 
